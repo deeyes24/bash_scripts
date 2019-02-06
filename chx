@@ -1,0 +1,13 @@
+# A Bash Shell script tool for giving all the .sh files executable permission. 
+# Also takes an argument gives the exec permission to that file alone
+#!/bin/bash
+if [[ $1 ]]
+then
+  chmod +x $1
+else
+ for i in $(ls *.sh)
+ do 
+   chmod +x $i
+ done
+fi
+
